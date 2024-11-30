@@ -1,7 +1,7 @@
 resource "aws_launch_template" "mylc" {
 image_id = "ami-0166fe664262f664c"
 instance_type = "t2.micro"
-
+key_name = "ansible-kp"
 network_interfaces {
 security_groups = [aws_security_group.sg.id]
 }
