@@ -1,4 +1,3 @@
-
 resource "aws_s3_bucket" "one" {
   bucket = "amareswar.k8"
 }
@@ -21,13 +20,5 @@ resource "aws_s3_bucket_versioning" "three" {
 bucket = aws_s3_bucket.one.id
 versioning_configuration {
 status = "Enabled"
-}
-}
-
-terraform {
-backend "s3" {
-region = "us-east-1"
-bucket = "amareswar.k8"
-key = "prod/terraform.tfstate"
 }
 }
