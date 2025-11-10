@@ -22,6 +22,7 @@ versioning_configuration {
 status = "Enabled"
 }
 }
+
 resource "aws_s3_bucket_public_access_block" "five" {
   bucket = aws_s3_bucket.one.id
 
